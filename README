@@ -1,0 +1,11 @@
+# Enable dashbord
+kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard-kong-proxy 8443:443
+
+# Enable application access from Windows
+
+minikube tunnel
+
+# Adding needed secret for Application
+
+kubectl create secret generic pgpassword --from-literal=PGPASSWORD=postgresdefault
+
