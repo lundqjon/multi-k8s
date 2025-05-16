@@ -9,3 +9,10 @@ minikube tunnel
 
 kubectl create secret generic pgpassword --from-literal=PGPASSWORD=postgresdefault
 
+# change env before start skaffold
+export DOCKER_HOST=unix:///run/podman/podman.sock
+skaffold dev
+
+
+
+
